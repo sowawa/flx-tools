@@ -11,7 +11,8 @@ DESC
         @_flx_tools_source_root ||= File.expand_path(File.join(File.dirname(__FILE__), 'templates'))
       end
 
-      def hoge
+      def copy_dot_flx
+        template '.flx'
       end
     end
   end
