@@ -24,6 +24,10 @@ DESC
       def copy_dispatch_fcgi
         template 'flx_dispatch.fcgi', File.join('public', 'flx_dispatch.fcgi')
       end
+
+      def copy_dot_htaccess
+        template '.htaccess', File.join('public', '.htaccess')
+      end
     end
   end
 end
