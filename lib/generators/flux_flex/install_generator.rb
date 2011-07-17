@@ -28,6 +28,20 @@ DESC
       def copy_dot_htaccess
         template '.htaccess', File.join('public', '.htaccess')
       end
+
+      def insert_gems
+        gemfile = 'Gemfile'
+        if File.exists?(gemfile)
+          body = File.read(gemfile)
+          File.open(gemfile, 'a') do |f|
+            f.puts "gem 'mysql2'" unless body.match(/mysql/)
+            f.puts "gem 'fcgi'" unless body.match(/fcgi/)
+          end
+        else
+          raise Rails::Generators::Error, "First, you must setup rspec by 'rails generate rspec:install'"
+        end
+
+      end
     end
   end
 end
