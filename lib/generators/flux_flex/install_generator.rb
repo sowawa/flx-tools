@@ -14,6 +14,12 @@ DESC
       def copy_dot_flx
         template '.flx'
       end
+
+      def copy_sh_files
+        template 'fluxflex_deploy.sh'
+        template 'fluxflex_rake.sh'
+        template 'fluxflex_setup.sh'
+      end
     end
   end
 end
