@@ -1,8 +1,8 @@
 require 'rails/generators/base'
 
-module FlxTools
+module FluxFlex
   module Generators
-    class FlxToolsGenerator < Rails::Generators::Base
+    class InstallGenerator < Rails::Generators::Base
       desc <<DESC
 Description:
     Add files to deploy for fluxflex
