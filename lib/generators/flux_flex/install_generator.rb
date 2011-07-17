@@ -20,6 +20,10 @@ DESC
         template 'fluxflex_rake.sh'
         template 'fluxflex_setup.sh'
       end
+
+      def copy_dispatch_fcgi
+        template 'flx_dispatch.fcgi', File.join('public', 'flx_dispatch.fcgi')
+      end
     end
   end
 end
